@@ -13,6 +13,6 @@ While executing the script, give the branch name as argument.
 
 ## Crontab:
 Following pattern can be used to schedule the bash script in crontab. In our case, we had to sync 4 to 5 SVN branches. Hence, we have scheduled multiple commands in the crontab.
-0 1 * * * sh /home/ec2-user/sync_svn_repo.sh branch01 >> /var/log/cron_svnsync/branch01/`date +\%Y\%m\%d-\%H\%M\%S`-cron.log 2>&1
-0 2 * * * sh /home/ec2-user/sync_svn_repo.sh branch02 >> /var/log/cron_svnsync/branch02/`date +\%Y\%m\%d-\%H\%M\%S`-cron.log 2>&1 
-0 3 * * * sh /home/ec2-user/sync_svn_repo.sh branch03 >> /var/log/cron_svnsync/branch03/`date +\%Y\%m\%d-\%H\%M\%S`-cron.log 2>&1
+- 0 1 * * * sh /home/ec2-user/sync_svn_repo.sh branch01 >> /var/log/cron_svnsync/branch01/`date +\%Y\%m\%d-\%H\%M\%S`-cron.log 2>&1
+- 0 2 * * * sh /home/ec2-user/sync_svn_repo.sh branch02 >> /var/log/cron_svnsync/branch02/`date +\%Y\%m\%d-\%H\%M\%S`-cron.log 2>&1 
+- 0 3 * * * sh /home/ec2-user/sync_svn_repo.sh branch03 >> /var/log/cron_svnsync/branch03/`date +\%Y\%m\%d-\%H\%M\%S`-cron.log 2>&1
